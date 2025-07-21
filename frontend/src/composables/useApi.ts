@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import type { Ref } from 'vue'
 import axios, { AxiosError } from 'axios'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
-import { useAuthStore } from '@/stores/auth'
+import { useAuthStore } from '@/store/auth'
 
 const api: AxiosInstance = axios.create({
   baseURL: 'https://cards-marketplace-api-2fjj.onrender.com',
