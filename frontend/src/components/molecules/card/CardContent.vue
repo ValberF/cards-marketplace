@@ -1,8 +1,8 @@
 <template>
   <div class="card__content">
+    <small class="card__date">{{ formattedDate }}</small>
     <CardTitle :title="name" />
     <CardDescription :description="description" />
-    <small class="card__date">{{ formattedDate }}</small>
   </div>
 </template>
 
@@ -10,6 +10,7 @@
 import { computed } from 'vue';
 import CardTitle from '@/components/atoms/card/CardTitle.vue';
 import CardDescription from '@/components/atoms/card/CardDescription.vue';
+import { formatDate } from '@/utils/formatDate';
 
 const props = defineProps<{
   name: string;
@@ -17,9 +18,7 @@ const props = defineProps<{
   createdAt: string;
 }>();
 
-const formattedDate = computed(() =>
-  new Date(props.createdAt).toLocaleDateString()
-);
+const formattedDate = computed(() => formatDate(props.createdAt, 'pt-BR'));
 </script>
 
 <style lang="scss" scoped>
