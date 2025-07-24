@@ -1,4 +1,3 @@
-<!-- UserCardsSelectModal.vue -->
 <template>
   <div v-if="open" class="user-cards-modal">
     <div class="user-cards-modal__backdrop" @click.self="onCancel"></div>
