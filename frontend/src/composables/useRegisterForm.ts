@@ -12,7 +12,7 @@ type FieldConfig = {
 };
 
 export function useRegisterForm() {
-  const { post, loading, error } = useApi();
+  const { post } = useApi();
   const router = useRouter();
   const toast = useToast();
 
@@ -63,21 +63,21 @@ export function useRegisterForm() {
     );
   });
 
-const onSubmit = handleSubmit(async (values) => {
-  try {
-    const payload = {
-      name: values.name,
-      email: values.email,
-      password: values.password,
-    };
-    await post('/register', payload);
-    toast.success('Usuário registrado com sucesso!');
-    router.push('/login');
-  } catch (err) {
-    toast.error('Erro ao registrar usuário. Tente novamente.');
+  const onSubmit = handleSubmit(async (values) => {
+    try {
+      const payload = {
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      };
+      await post('/register', payload);
+      toast.success('Usuário registrado com sucesso!');
+      router.push('/login');
+    } catch (err) {
+      toast.error('Erro ao registrar usuário. Tente novamente.');
 
-  }
-});
+    }
+  });
 
   return {
     fields,

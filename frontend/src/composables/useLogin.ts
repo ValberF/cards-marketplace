@@ -4,7 +4,7 @@ import { useAuthStore } from '@/store/auth';
 import type { User } from '@/models/User.model';
 
 export function useLogin() {
-  const { post, loading, error } = useApi();
+  const { post, error } = useApi();
   const authStore = useAuthStore();
   const loginLoading = ref(false);
 
