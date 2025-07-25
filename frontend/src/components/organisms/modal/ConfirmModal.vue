@@ -42,6 +42,7 @@ $modal-shadow: 0 2px 16px rgba(0,0,0,0.15);
 $modal-message-margin: 1.5rem;
 $modal-message-font-size: 1.1rem;
 $modal-actions-gap: 1rem;
+$mobile-breakpoint: 768px;
 
 .modal {
   &__backdrop {
@@ -63,6 +64,10 @@ $modal-actions-gap: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 300px;
+    }
   }
 
   &__message {

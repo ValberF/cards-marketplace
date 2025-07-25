@@ -6,7 +6,7 @@
         <span :class="`${baseClass}__brand`">Cards Marketplace</span>
       </h1>
     </RouterLink>
-    <Box :width="boxWidth" padding="2.5rem">
+    <Box width="100%" padding="2.5rem">
       <h2 :class="`${baseClass}__subtitle`">
         {{ title }}
         <small :class="`${baseClass}__subtitle-text`">{{ subtitle }}</small>
@@ -40,7 +40,6 @@ import Button from '@/components/atoms/Button.vue';
 
 defineProps<{
   baseClass: string,
-  boxWidth: string,
   title: string,
   subtitle: string,
   buttonText: string,
