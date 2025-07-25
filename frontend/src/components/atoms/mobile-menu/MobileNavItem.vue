@@ -31,7 +31,6 @@ $item-padding: 1rem;
 $item-radius: 0.5rem;
 $item-transition: all 0.2s ease;
 
-// Colors
 $default-color: #374151;
 $default-bg-hover: #f3f4f6;
 $primary-color: #2664eb;
@@ -58,7 +57,6 @@ $danger-bg-hover: #fef2f2;
     flex: 1;
   }
   
-  // Variants
   &--default {
     color: $default-color;
     

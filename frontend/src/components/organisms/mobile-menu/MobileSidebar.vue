@@ -129,7 +129,6 @@ $header-height: 80px;
   }
 }
 
-// Prevent body scroll when sidebar is open
 :global(body.mobile-sidebar-open) {
   overflow: hidden;
 }

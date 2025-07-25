@@ -1,6 +1,5 @@
 <template>
   <div class="header__actions">
-    <!-- Mobile: mostra só o menu hambúrguer -->
     <template v-if="isMobile">
       <Button variant="secondary" @click="drawerOpen = true" aria-label="Abrir menu">
         <Icon name="Menu" :size="28" />
@@ -83,7 +82,6 @@ function onLogout() {
   router.push('/');
 }
 
-// Fecha o drawer e executa a ação
 function goAndClose(fn: () => void) {
   return () => {
     fn();
