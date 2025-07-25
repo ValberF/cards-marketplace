@@ -73,7 +73,7 @@ async function confirmAdd() {
 </script>
 
 <style lang="scss" scoped>
-$cards-padding: 30px 100px;
+$cards-padding: 30px 10%;
 $cards-gap: 24px;
 $card-min-width: 220px;
 $pagination-margin-top: 10px;
