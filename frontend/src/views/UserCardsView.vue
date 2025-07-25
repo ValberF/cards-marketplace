@@ -38,7 +38,7 @@ async function handleSave(cardIds: string[]) {
 </script>
 
 <style lang="scss" scoped>
-$cards-padding: 30px 100px;
+$cards-padding: 30px 10%;
 $cards-gap: 24px;
 $card-min-width: 280px;
 $pagination-margin-top: 10px;

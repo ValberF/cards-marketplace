@@ -114,6 +114,7 @@ $user-cards-modal-title-weight: 600;
 $user-cards-modal-title-margin: 1.2rem;
 $user-cards-modal-actions-margin: 1.5rem;
 $modal-actions-gap: 1rem;
+$mobile-breakpoint: 768px;
 
 .user-cards-modal {
   position: fixed;
@@ -141,6 +142,10 @@ $modal-actions-gap: 1rem;
     min-height: 30%;
     box-shadow: $user-cards-modal-shadow;
     z-index: 1;
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 95%;
+    }
   }
 
   &__title {

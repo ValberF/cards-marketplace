@@ -2,12 +2,14 @@ import { computed, ref } from 'vue';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/vue-query';
 import type { Card, CardsResponse, PostUserCardsBody } from '@/models/Card.model';
 import { useApi } from '@/composables/useApi';
+import { useAuthStore } from '@/store/auth';
 
 export function useCards() {
   const page = ref(1);
   const rpp = ref(10);
   const queryClient = useQueryClient();
   const { get, post } = useApi();
+  const auth = useAuthStore();
 
   const {
     data: cardsData,
@@ -48,6 +50,7 @@ export function useCards() {
     queryFn: async () => {
       return await get<Card[]>('/me/cards');
     },
+    enabled: computed(() => !!auth.user && !!auth.token),
     staleTime: 2 * 60 * 1000, 
   });
 
